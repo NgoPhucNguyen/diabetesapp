@@ -1,0 +1,114 @@
+/* ==============================
+  🎯 Diabetes Prediction Form
+  (Parent Container Styles Only)
+   ============================== */
+
+.predict-form {
+  max-width: 1500px;
+  width: 900px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 14px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-family: "Inter", system-ui, sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.predict-form h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+/* ==============================
+   🧩 Fieldsets & Legends
+   ============================== */
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 32px;
+  background-color: var(--card-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Visual divider for each section */
+fieldset:not(:last-child) {
+  border-left: 5px solid var(--accent);
+}
+
+legend {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: table; /* ✅ centers the legend properly */
+  background-color: var(--background-color); /* optional for overlap */
+}
+
+
+/* ==============================
+   🏷️ Label Alignment
+   (Applies only to outer layout)
+   ============================== */
+
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--text-color);
+  flex-wrap: nowrap; /* keep tooltip icon inline */
+}
+
+/* ==============================
+   🚀 Submit Button
+   ============================== */
+
+.submit-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.submit-btn.disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+  color: #666;
+  border: none;
+  box-shadow: none;
+}
+
+/* ==============================
+   📱 Responsive Design
+   ============================== */
+
+@media (max-width: 700px) {
+  .predict-form {
+    padding: 20px;
+  }
+
+  label {
+    white-space: normal; /* allow wrapping when narrow */
+  }
+}

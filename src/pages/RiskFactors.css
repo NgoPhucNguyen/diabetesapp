@@ -1,0 +1,40 @@
+.risk-content {
+  flex: 1; /* makes this area grow to fill available space */
+  display: flex; /* for centering content */
+  flex-direction: column; /* vertical layout */
+  align-items: center; /* center horizontally */
+  width: 100%;  /* full width */
+  box-sizing: border-box; /* include padding in width */
+  padding: 0rem 1rem; /* spacing around content */
+  text-align: left;
+}
+
+.risk-content h1 {
+  font-size: 2.5rem; /* larger font size for main heading */
+  margin-bottom: 1rem; /* spacing below heading */
+  color: #333; /* dark text color */
+  font-family:"Cheddar Gothic Sans", sans-serif; /* use custom font */
+
+}
+
+.risk-content p {
+  font-size: 1.125rem; /* slightly larger font for readability */
+  line-height: 1.6; /* better line spacing */
+  margin-bottom: 1rem; /* spacing below paragraphs */
+  color: #555; /* medium text color */
+}
+
+.risk-content ul {
+  list-style-type: disc; /* bullet points */
+  padding-left: 1.5rem; /* indent for list */
+  margin-bottom: 1rem; /* spacing below list */
+}
+
+.symptoms-content .header-image {
+  max-width: 100%; /* ensure image doesn't overflow */
+  height: auto; /* maintain aspect ratio */
+  margin-bottom: 1.5rem; /* spacing below image */
+  border-radius: 8px; /* rounded corners */
+}
+
+

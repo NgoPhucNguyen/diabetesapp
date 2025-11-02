@@ -1,0 +1,6 @@
+X.hist_bmi.png.,X.BMI.Distribution.,X.Shows.the.overall.BMI.distribution.in.dataset.
+hist_bmi.png,BMI Distribution,Shows the overall BMI distribution in dataset
+bar_diabetes_by_sex.png,Diabetes by Sex,Shows how diabetes cases vary between sexes
+box_bmi_by_diabetes.png,BMI vs Diabetes,Compare BMI across diabetes categories
+scatter_bmi_highchol.png,Scatter BMI vs HighChol,Relationship between BMI and cholesterol
+corr_heatmap.png,Correlation Heatmap,Correlations among numeric features

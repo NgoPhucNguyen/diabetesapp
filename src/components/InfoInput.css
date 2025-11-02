@@ -1,0 +1,57 @@
+/* src/components/InfoInput.css */
+
+/* Container for each labeled input + tooltip */
+.info-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* Input field itself */
+.info-input input {
+  border: 1px solid var(--border-color); /* ✅ theme border */
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--card-bg); /* ✅ themed background */
+  color: var(--text-color); /* ✅ themed text */
+  transition: 
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* On focus: accent highlight */
+.info-input input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 4px var(--accent-light);
+}
+
+/* Tooltip box below the input */
+.tooltip-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background: var(--card-bg); /* ✅ theme background */
+  border: 1px solid var(--border-color); /* ✅ theme border */
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-color); /* ✅ theme text */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  white-space: pre-wrap;
+  width: max-content;
+  max-width: 300px;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Optional: subtle glow on hover */
+.tooltip-box:hover {
+  box-shadow: 0 0 6px var(--accent-light);
+}

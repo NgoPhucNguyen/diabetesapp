@@ -1,0 +1,50 @@
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+
+.carousel-card {
+  width: 220px;
+  height: 220px;
+  min-width: 220px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.3s;
+}
+
+.carousel-card img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,100 @@
+/* ==============================
+  🧩 BinarySelect Component
+   ============================== */
+/* Red asterisk */
+.required-star {
+  color: red;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+/* ✅ New required highlight only for buttons */
+.binary-select.missing .binary-btn {
+  border: 2px solid rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+/* ✅ Optional smooth fade */
+.binary-select .binary-btn {
+  transition: all 0.25s ease-in-out;
+}
+
+
+/* Smooth transition */
+.binary-select .binary-options {
+  transition: all 0.2s ease-in-out;
+}
+
+.binary-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Label styling */
+.binary-select label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  flex-wrap: nowrap; /* keep tooltip in one line */
+}
+
+/* ==============================
+  ⚙️ Options Container
+   ============================== */
+
+.binary-options {
+  width: 400px;  /* width */
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;  /*gap between 2 button*/
+}
+
+/* ==============================
+  🔘 Option Buttons
+   ============================== */
+
+.binary-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.binary-btn:hover {
+  background-color: var(--accent-light);
+}
+
+.binary-btn.selected {
+  background-color: var(--accent);
+  color: #fff;
+  border-color: var(--accent-dark);
+  font-weight: 600;
+}
+
+/* ==============================
+   📱 Responsive Behavior
+   ============================== */
+
+@media (max-width: 600px) {
+  .binary-options {
+    flex-direction: column;
+  }
+
+  .binary-btn {
+    width: 100%;
+  }
+}

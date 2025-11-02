@@ -1,0 +1,43 @@
+- Tooltip 
+
+{tooltip && <Tooltip text={tooltip} position="top" />}
+
+
+A Plot.jsx (page) having these features :
+- Users could choose what plots they want 
+- Option is already there, like showing picture 
+- the plot will render by R code ( I don't have R code yet so how can I call API with R and React ?)
+- (Add later : people could choose each features (based on specific plot))
+- Like heatmap is can choose 21 features
+- Barplot cannot choose features that binary
+- Or Binary features what can plot some what. Like a search
+- A plot have tags : 1. Whats are features ? 2. What kind of plots 3. Plots show what 
+- A plot-container (or card) will have a picture of plots, description and what plots is talk about?
+Step by step for me to understand
+
+https://en.wikipedia.org/wiki/Diabetes
+
+https://my.clevelandclinic.org/health/diseases/7104-diabetes
+
+https://www.thediabetescouncil.com/10-foods-that-cause-diabetes/
+
+https://www.vinmec.com/vie/benh/tieu-duong-tuyp-2-3042
+
+https://www.who.int/news-room/fact-sheets/detail/diabetes
+
+
+
+#CFB79D
+
+
+
+Note
+
+
+
+Chữ đen  cho doctor 
+tác giả in nghiêng 
+
+Làm footer riêng cho 
+
+BMI ( decimal )

@@ -1,0 +1,45 @@
+.subpage {
+  max-width: none;
+  margin: 4rem auto;
+  text-align: center;
+  background-color: var(--card-bg);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.subpage h1 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.subpage p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.subpage-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.subpage-nav button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.subpage-nav button:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}

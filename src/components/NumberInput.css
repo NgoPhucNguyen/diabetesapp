@@ -1,0 +1,56 @@
+/* src/components/NumberInput.css */
+
+.number-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+/* Label */
+.number-label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-color); /* ✅ theme text color */
+}
+
+/* Input */
+.number-input {
+  width: 400px;
+  border: 1px solid var(--border-color); /* ✅ soft border */
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+  background-color: var(--card-bg); /* ✅ card-style background */
+  color: var(--text-color); /* ✅ readable on both themes */
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+  box-sizing: border-box;
+}
+
+/* Focus State */
+.number-input:focus {
+  border-color: var(--accent); /* ✅ teal focus */
+  box-shadow: 0 0 6px var(--accent-light);
+  background-color: var(--bg-color);
+}
+
+/* Invalid (Required) */
+.number-input:invalid {
+  border-color: #e74c3c;
+  box-shadow: 0 0 4px rgba(231, 76, 60, 0.4);
+}
+
+/* Chrome spin button fix */
+.number-input::-webkit-inner-spin-button {
+  margin: 0;
+}
+
+/* Optional: Slightly dim the input in dark mode */
+:root[data-theme='dark'] .number-input {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}

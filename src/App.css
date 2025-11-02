@@ -1,0 +1,71 @@
+/* App.css */
+
+@font-face {
+  font-family: "Cheddar Gothic Sans";
+  src: url("/fonts/cheddar-gothic-sans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* App container wraps the whole page */
+.app-container {
+  display: flex;
+  flex-direction: column; /* makes layout vertical: Navbar → Content → Footer */
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100%; /* keep it from overflowing */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /*CHANGE THIS!!! */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Main content area below navbar */
+
+/* Footer */
+.footer {
+  background-color: var(--bg-color, #ffffff); /* default to white if variable not set */
+  border-top: 1px solid #ddd; /* subtle top border */
+  text-align: center; /* center text */
+  padding: 1rem; /* spacing */
+  width: 100%; /* full width */
+  box-sizing: border-box; /* include padding in width */
+}
+
+
+/* 🌐 Global section layout — reusable across all pages */
+.page-section {
+  width: 100%; /* full width */
+  max-width: 100%; /* full width by default */
+  margin: 0rem 3rem; /* vertical spacing between sections */
+  padding: 2rem 2rem; /* internal padding */
+  display: flex; /* flexbox layout */
+  flex-direction: column;
+  align-items: center; /* center items vertically */
+  justify-content: space-between; /* space items apart */
+  gap: 2.5rem; /* spacing between items */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  text-align: center; /* center text */
+  
+}
+
+.subpage-section {
+  width: 900px; /* full width */
+  max-width: 100%; /* full width by default */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  text-align: left; /* left align text */
+  margin: 2rem auto; /* center section with vertical spacing */
+
+}
+
+.subpage-nav {
+  display: flex; /* flexbox layout */
+  justify-content: space-between; /* space buttons apart */
+  width: 100%; /* full width */
+  max-width: 900px; /* limit max width */
+  margin-top: 2rem; /* spacing above nav */
+}
+

@@ -1,0 +1,103 @@
+/* ====== Navbar Container ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* ✅ Better alignment than space-around */
+  align-items: center;
+  width: 100%; /* ✅ Full width to match app container */
+  max-width: 100%;
+  background-color: var(--navbar-bg);
+  border-bottom: 2px solid var(--accent-light);
+  padding: 0.8rem 2rem;
+  position: relative;
+  z-index: 10;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box; /* ✅ prevents overflow issues */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ====== Logo / Brand ====== */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0; /* ✅ Remove weird spacing */
+}
+
+/* ====== Menu (Desktop) ====== */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center; /* ✅ Centers the links within their space */
+}
+
+/* ====== Menu Links ====== */
+.navbar-menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+  padding-bottom: 3px;
+}
+
+.navbar-menu li a:hover {
+  color: var(--accent);
+}
+
+.navbar-menu li a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ====== Hamburger (Mobile) ====== */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: var(--accent);
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+
+/* ====== Mobile Menu ====== */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* ✅ keeps logo and menu toggle aligned */
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--navbar-mobile-bg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.8rem 0;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}

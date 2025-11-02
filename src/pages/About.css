@@ -1,0 +1,60 @@
+/* src/pages/About.css */
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--card-bg); /* ✅ adapts to theme */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: var(--text-color); /* ✅ unified text color */
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main title */
+.about-title {
+  text-align: center;
+  color: var(--accent); /* ✅ teal accent */
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Intro paragraph */
+.about-intro {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.about-section h2 {
+  color: var(--accent-dark); /* ✅ deeper teal */
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* List styling */
+.about-section ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+/* Add subtle glow for dark mode */
+:root[data-theme='dark'] .about-container {
+  box-shadow: 0 0 12px rgba(0, 183, 168, 0.15);
+}

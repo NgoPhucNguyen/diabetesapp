@@ -1,0 +1,225 @@
+.home-overview,
+.home-quote-section,
+.home-stats,
+.home-video {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* centers them horizontally */
+}
+
+/* ===== 1️⃣ Home Overview Section (Fixed) ===== */
+.home-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 4rem 4rem; /* top, sides, bottom */
+  margin: 0 auto; /* center horizontally */
+  max-width: 1000px; 
+  /* background gradient */
+  background: linear-gradient(
+    180deg,
+    var(--accent-light) 0%,
+    var(--bg-color) 100%
+  );
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.home-overview h1 {
+  font-size: 2.4rem; /* larger font size */
+  font-weight: 800; /* bolder */
+  color: var(--accent-dark); /* accent color */
+  margin-bottom: 1rem; /* spacing below */
+  margin-top: 0;
+}
+
+.home-overview p {
+  max-width: 700px;  
+  margin: 0 auto 2rem; /* center and space below */
+  line-height: 0.5; /* improve readability */
+  font-size: 1.05rem; /* slightly larger font */
+  opacity: 0.9; /* subtle text */
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons for subpages */
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ===== 🎨 Refined Buttons for Home Overview ===== */
+.home-buttons button {
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 205, 0.2);
+}
+
+.home-buttons button:hover {
+  background: linear-gradient(180deg, var(--accent-dark) 0%, rgb(0, 0, 120) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 205, 0.3);
+}
+
+.home-buttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 205, 0.25);
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .home-overview h1 {
+    font-size: 1.9rem;
+  }
+  .home-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ===== 2️⃣ Doctor & Patient Section ===== */
+.home-quote-section {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s ease;
+}
+
+/* 🩺 Text on the left */
+.home-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.home-text h1 {
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--accent-dark);
+  margin-bottom: 1rem;
+}
+
+.home-text h2 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: left;
+}
+
+/* 🖼️ Image on the right */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Subtle fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===== 3️⃣ Stats Section ===== */
+.home-stats {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-stats h1 {
+  font-size: 3rem;
+}
+.stats-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.stats-cards h3 {
+  font-size: 3rem;
+  color: var(--accent-dark);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  padding-bottom: 30px;
+}
+
+.stats-cards .card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+/* ===== 4️⃣ Video Section ===== */
+.home-video {
+  width: 100%; /* full width */
+  max-width: none; /* override any max-width */
+  padding: 3rem 0; /* vertical padding */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.home-video h1 {
+  font-size: 3rem;
+  text-align: center; 
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+.video-wrapper {
+  width: 90%; /* responsive width */
+  max-width: 1400px; /* increased max width */
+  aspect-ratio: 16 / 9; /* maintain 16:9 ratio */
+  margin: 0 auto; /* center horizontally */
+  border-radius: 16px; /* rounded corners */
+  overflow: hidden; /* clip overflow */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}

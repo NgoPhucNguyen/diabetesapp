@@ -1,0 +1,82 @@
+/* ==============================
+   💬 Tooltip Component (State-based)
+   ============================== */
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+/* Question mark icon */
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 0.85rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.info-icon:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Tooltip box */
+.tooltip-box {
+  position: absolute;
+  bottom: 125%; /* show above icon */
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  max-width: 500px;
+  min-width: 120px;
+  width: max-content;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* When tooltip is visible (React mounts it) */
+.tooltip-wrapper .tooltip-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* Tooltip arrow */
+.tooltip-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--card-bg) transparent transparent transparent;
+}
+
+/* Optional glow for dark theme */
+:root[data-theme='dark'] .tooltip-box {
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 10px rgba(0, 183, 168, 0.3);
+}

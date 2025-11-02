@@ -1,0 +1,59 @@
+/* src/components/DropdownSelect.css */
+
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.dropdown-label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-color); /* ✅ adapt to theme */
+}
+
+.dropdown-select {
+  width: 400px;
+  border: 1.5px solid var(--border-color); /* ✅ themed border */
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+  background-color: var(--card-bg); /* ✅ themed background */
+  color: var(--text-color); /* ✅ themed text */
+  outline: none;
+  transition: 
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Focused dropdown */
+.dropdown-select:focus {
+  border-color: var(--accent); /* ✅ teal highlight */
+  box-shadow: 0 0 6px var(--accent-light);
+  background-color: var(--card-bg);
+}
+
+/* Options inside dropdown */
+.dropdown-select option {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Invalid (required but empty) */
+.dropdown-select:invalid {
+  border-color: #e74c3c; /* ⚠️ Keep red to show error clearly */
+  box-shadow: 0 0 4px rgba(231, 76, 60, 0.3);
+}
+
+/* Valid (field filled) */
+.dropdown-select:valid {
+  border-color: var(--border-color);
+}
