@@ -1,23 +1,24 @@
-# Use an official R base image
+# ===============================
+# 🩺 Diabetes Backend - Dockerfile (Render)
+# ===============================
 FROM rocker/r-base:4.3.1
 
-# System deps
-RUN apt-get update && apt-get install -y python3 python3-venv python3-pip
+# Fix missing Debian GPG keys before apt-get update
+RUN apt-get update || true && \
+  apt-get install -y --no-install-recommends gnupg ca-certificates && \
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6ED0E7B82643E131 78DBA3BC47EF2265 BDE6D2B9216EC7A8 8E9F831205B4BA95 || true && \
+  apt-get update && \
+  apt-get install -y python3 python3-venv python3-pip
 
 # Copy all backend files
 WORKDIR /app
-COPY . /app
+COPY . .
 
-# Install R packages
-RUN R -e "install.packages(c('plumber','jsonlite','reticulate'), repos='https://cloud.r-project.org/')"
+# Install R dependencies
+RUN R -e "install.packages(c('plumber', 'jsonlite', 'reticulate'))"
 
-# Create Python venv and install deps
-RUN python3 -m venv venv && \
-  . venv/bin/activate && \
-  pip install numpy onnxruntime
+# Expose port for Render
+EXPOSE 8080
 
-# Expose API port
-EXPOSE 8000
-
-# Run your R API
-CMD ["Rscript", "run.R"]
+# Run the Plumber API
+CMD ["R", "-e", "pr <- plumber::plumb('run.R'); pr$run(host='0.0.0.0', port=as.numeric(Sys.getenv('PORT', 8080)))"]
