@@ -54,8 +54,8 @@ export default function Symptoms() {
 
         
           <div className="subpage-nav">
-            <Button className="" onClick={() => navigate("/basics")}> basics</Button>
-            <Button onClick={() => navigate("/riskfactors")}>risk factors</Button>
+            <Button className="" onClick={() => navigate("/basics")}> Basics</Button>
+            <Button onClick={() => navigate("/riskfactors")}>Risk Factors</Button>
           </div>
       </div>
     </div>

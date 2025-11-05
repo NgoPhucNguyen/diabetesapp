@@ -74,8 +74,8 @@ export default function RiskFactors() {
 
         
           <div className="subpage-nav">
-            <Button onClick={() => navigate("/symptoms")}>symptoms</Button>
-            <Button onClick={() => navigate("/preventing")}>preventing</Button>
+            <Button onClick={() => navigate("/symptoms")}>Symptoms</Button>
+            <Button onClick={() => navigate("/preventing")}>Preventing</Button>
           </div>
       </div>
     </div>

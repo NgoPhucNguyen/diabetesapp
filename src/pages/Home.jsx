@@ -1,20 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Home.css";
+import ReactPlayer from "react-player";
 
+
+import "./Home.css";
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="page-section">
+    <div className="page-section home-page">
       {/* ====== 1️⃣ Overview of 5 Subpages ====== */}
       <div className="home-overview">
         <div className="home-intro">
           <h1>Diabetes</h1>
           <p>
-            Diabetes is a chronic condition that affects how your body turns food into energy.
-          </p>
-          <p>    
+            Diabetes is a chronic condition that affects how your body turns food into energy.  
             Learn more about its symptoms, risks, and prevention to protect your health.
           </p>
 
@@ -70,13 +70,14 @@ export default function Home() {
       <div className="home-video">
         <h1>Video Spotlight</h1>
         <div className="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/wZAjVQWbMlE"
-            title="What is Diabetes - Educational Video"
-            allowFullScreen
-          ></iframe>
+          <video width="100%" controls>
+            <source src="/video/1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
+
+
     </div>
   );
 }

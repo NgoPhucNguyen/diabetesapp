@@ -1,90 +1,112 @@
 /* =======================
-  🌟 Predict Page Styling
-========================= */
+ 🌟 Predict Page Styling
+========================== */
 
 .predict-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  min-height: 200vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  min-height: 100vh;
 }
 
 /* Title */
 .predict-container h1 {
-  color: var(--accent-dark);
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
   text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 1.5rem;
 }
 
 /* ============================
-  🧠 Model Selection
+ 🧠 Model Selection
 ============================ */
 .model-selector {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5rem 2rem;
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 1.5rem;
-  width: 100%;
-  max-width: 700px;
+  background-color: var(--card-bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .model-selector h2 {
-  font-size: 1.2rem;
+  align-self: center;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: var(--accent-dark);
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
+/* Buttons layout */
 .model-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
-.model-buttons button {
-  padding: 0.6rem 1.2rem;
+/* Base button style */
+.model-selector button {
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2b4de5;
+  background-color: #e8eefc;
+  border: 1px solid #c5d0f7;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background-color: var(--card-bg);
-  color: var(--text-color);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
-.model-buttons button:hover {
-  background-color: var(--accent-light);
-  border-color: var(--accent);
+/* Hover effect */
+.model-selector button:hover {
+  background-color: #d9e3fb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* Active (selected) model button */
-.model-buttons .active {
+/* Active (selected) button */
+.model-selector button.active {
   background-color: var(--accent);
+  border-color: var(--accent);
   color: #fff;
-  border-color: var(--accent-dark);
-  box-shadow: 0 0 10px rgba(0, 0, 205, 0.3); /* 💙 Soft blue glow */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus and disabled states */
+.model-selector button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.model-selector button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* ============================
-  🧾 Form Section
+ 🧾 Form Section
 ============================ */
 .form-section {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
   width: 100%;
   max-width: 700px;
   margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--card-bg);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -94,13 +116,14 @@
   align-items: center;
 }
 
+/* Toggle form button */
 .toggle-form-btn {
   background: none;
   border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--accent-dark);
   cursor: pointer;
-  font-weight: 600;
-  font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
@@ -108,40 +131,130 @@
   color: var(--accent);
 }
 
-/* ============================
-   🩺 Result Section
-============================ */
+/* ==============================
+ 🩺 Prediction Result Styling (Text-only)
+============================== */
+
 .result-container {
-  background-color: var(--accent-light);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
   width: 100%;
-  max-width: 700px;
-  margin-top: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 205, 0.15); /* 💙 blue glow */
+  max-width: 900px;
+  margin-top: 2rem;
+  padding: 2rem 2.2rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #f9fbff 0%, #eef3ff 100%);
+  border: 1px solid #d7e0ff;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.15);
+  color: var(--text-color);
   text-align: left;
+  transition: all 0.35s ease;
+  position: relative;
 }
 
+.result-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.2);
+}
+
+/* Title */
 .result-container h2 {
-  color: var(--accent-dark);
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-}
-
-.result-container p {
-  margin: 0.4rem 0;
-}
-
-.result-container .highlight {
-  color: rgb(0, 0, 205);
+  color: #1e3a8a;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #dbe4ff;
+  padding-bottom: 0.4rem;
 }
+
+/* Result text */
+.prediction-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.highlight {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Confidence bar */
+.confidence-bar {
+  width: 100%;
+  height: 12px;
+  background: #e0e7ff;
+  border-radius: 6px;
+  margin: 0.8rem 0 0.6rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.confidence-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+  width: 0%;
+  transition: width 1s ease-in-out;
+}
+
+/* Confidence percentage */
+.confidence-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+/* Probabilities box */
+.probabilities-box {
+  background-color: #eef3ff;
+  border: 1px solid #d4dcfa;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  color: #1e3a8a;
+  line-height: 1.6;
+  box-shadow: inset 0 2px 6px rgba(59, 130, 246, 0.08);
+}
+
+/* Animation */
+.result-container p,
+.result-container .probabilities-box {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* ============================
-   🌙 Dark Mode Enhancement
+ 📱 Responsive Design
 ============================ */
-:root[data-theme='dark'] .predict-card,
-:root[data-theme='dark'] .result-container {
-  box-shadow: 0 0 15px rgba(0, 0, 205, 0.25); /* 💙 subtle blue glow */
+@media (max-width: 700px) {
+  .predict-container {
+    padding: 1.2rem;
+  }
+
+  .model-selector {
+    padding: 1.2rem;
+  }
+
+  .model-buttons {
+    gap: 0.8rem;
+  }
+
+  .model-selector button {
+    width: 100%;
+    max-width: 220px;
+  }
 }

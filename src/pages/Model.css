@@ -1,6 +1,8 @@
 .model-page {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .model-grid {
@@ -11,18 +13,20 @@
   margin-top: 2rem;
 }
 
+/* === Model Card === */
 .model-card {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 320px;
+  width: 300px;
   padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .model-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .model-card img {
@@ -34,12 +38,27 @@
 }
 
 .model-card h2 {
-  color: var(--accent);
+  font-size: 1.25rem;
+  color: var(--accent, #0078d7);
   margin-bottom: 0.5rem;
+}
+
+.model-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .accuracy {
   margin-top: 0.8rem;
-  font-weight: bold;
-  color: var(--accent);
+  font-weight: 600;
+  color: var(--accent, #0078d7);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .model-card {
+    width: 100%;
+    max-width: 400px;
+  }
 }

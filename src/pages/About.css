@@ -1,60 +1,107 @@
-/* src/pages/About.css */
-
+/* ============================
+   🌐 About Page Layout
+============================ */
 .about-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--card-bg); /* ✅ adapts to theme */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  color: var(--text-color); /* ✅ unified text color */
-  border: 1px solid var(--border-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-/* Main title */
+/* ============================
+   🏷️ Titles
+============================ */
 .about-title {
   text-align: center;
-  color: var(--accent); /* ✅ teal accent */
-  margin-bottom: 1.5rem;
   font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.about-section h2,
+.about-members h2,
+.tech-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
-/* Intro paragraph */
-.about-intro {
-  text-align: justify;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-color);
-  margin-bottom: 2rem;
+/* ============================
+   👥 Members Section
+============================ */
+.about-members {
+  text-align: center;
 }
 
-/* Sections */
-.about-section {
-  margin-bottom: 2rem;
-}
-
-.about-section h2 {
-  color: var(--accent-dark); /* ✅ deeper teal */
-  margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-}
-
-.about-section p,
-.about-section ul {
+.members-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  min-width: 400px;
   font-size: 1rem;
-  color: var(--text-color);
+}
+
+.members-table th,
+.members-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.members-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.members-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* ============================
+   💬 General Section
+============================ */
+.about-section {
   line-height: 1.6;
 }
 
-/* List styling */
-.about-section ul {
-  list-style-type: disc;
-  margin-left: 2rem;
+.about-section p {
+  text-align: justify;
+  color: #444;
+  font-size: 1rem;
 }
 
-/* Add subtle glow for dark mode */
-:root[data-theme='dark'] .about-container {
-  box-shadow: 0 0 12px rgba(0, 183, 168, 0.15);
+/* ============================
+   💡 Technologies Used
+============================ */
+/* === Technologies Section === */
+.tech-section {
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  text-align: left;
+  line-height: 1.6;
 }
+
+.tech-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.tech-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.tech-section li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #444;
+}
+

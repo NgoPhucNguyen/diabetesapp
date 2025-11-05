@@ -69,3 +69,15 @@
   margin-top: 2rem; /* spacing above nav */
 }
 
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --navbar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #ddd;
+  --accent: #0066cc;
+  --accent-dark: #004999;
+  --accent-light: #e0f0ff;
+}
+

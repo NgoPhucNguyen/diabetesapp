@@ -88,7 +88,7 @@ export default function FormPredict({ onSubmit }) {
   };
 
   return (
-    <div className="predict-form" onSubmit={handleSubmit}>
+    <form className="predict-form" onSubmit={handleSubmit}>
       <h2> Prediction Form</h2>
 
       {/* 1️⃣ DEMOGRAPHICS & SOCIAL */}
@@ -240,7 +240,7 @@ export default function FormPredict({ onSubmit }) {
           // onChange={handleChange} // harmless; it's readOnly below
           placeholder="Calculated automatically"
           min="10"
-          max="80"
+          max="200"
           tooltip="BMI = weight (kg) / (height (m))²"
           readOnly
         />
@@ -431,6 +431,6 @@ export default function FormPredict({ onSubmit }) {
       >
         {isFormComplete ? "Submit" : "Complete all fields to submit"}
       </button>
-    </div>
+    </form>
   );
 }

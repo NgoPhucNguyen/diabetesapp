@@ -74,8 +74,8 @@ export default function Preventing() {
 
         
           <div className="subpage-nav">
-            <Button onClick={() => navigate("/riskfactors")}>riskfactors</Button>
-            <Button onClick={() => navigate("/treatment")}>treatment</Button>
+            <Button onClick={() => navigate("/riskfactors")}>Risk Factors</Button>
+            <Button onClick={() => navigate("/treatment")}>Treatment</Button>
           </div>
       </div>
     </div>

@@ -40,8 +40,8 @@ export default function Basics() {
         </div>
 
           <div className="subpage-nav">
-            <Button onClick={() => navigate("/treatment")}> treatment  </Button>
-            <Button onClick={() => navigate("/symptoms")}> symptoms</Button>
+            <Button onClick={() => navigate("/treatment")}> Treatment  </Button>
+            <Button onClick={() => navigate("/symptoms")}> Symptoms</Button>
           </div>
       
       </div>

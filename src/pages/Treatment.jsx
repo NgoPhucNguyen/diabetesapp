@@ -9,7 +9,7 @@ export default function Treatment() {
     <div className="subpage-section">
       <div className="treatment-content" >
         <div className="treatment-text">
-          <h1>treatment of diabetes</h1>
+          <h1>treatment for diabetes</h1>
 
           <p>
             While there is currently no cure for diabetes, it can be effectively managed so that
@@ -97,8 +97,8 @@ export default function Treatment() {
 
         
           <div className="subpage-nav">
-            <Button onClick={() => navigate("/preventing")}>preventing</Button>
-            <Button onClick={() => navigate("/basics")}>basics</Button>
+            <Button onClick={() => navigate("/preventing")}>Preventing</Button>
+            <Button onClick={() => navigate("/basics")}>Basics</Button>
           </div>
       </div>
     </div>
