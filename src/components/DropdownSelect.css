@@ -5,6 +5,7 @@
   flex-direction: row;
   margin-bottom: 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .dropdown-label {
@@ -56,4 +57,19 @@
 /* Valid (field filled) */
 .dropdown-select:valid {
   border-color: var(--border-color);
+}
+
+
+@media (max-width: 480px) {
+  .dropdown-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .dropdown-select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }

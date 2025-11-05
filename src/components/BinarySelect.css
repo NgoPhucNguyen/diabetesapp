@@ -45,16 +45,7 @@
   flex-wrap: nowrap; /* keep tooltip in one line */
 }
 
-/* ==============================
-  ⚙️ Options Container
-   ============================== */
 
-.binary-options {
-  width: 400px;  /* width */
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;  /*gap between 2 button*/
-}
 
 /* ==============================
   🔘 Option Buttons
@@ -86,11 +77,25 @@
 }
 
 /* ==============================
-   📱 Responsive Behavior
+  ⚙️ Options Container
    ============================== */
 
-@media (max-width: 600px) {
+.binary-options {
+  width: 400px;  /* width */
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;  /*gap between 2 button*/
+}
+
+@media (max-width: 480px) {
+  .binary-select {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   .binary-options {
+    width: 100%;
     flex-direction: column;
   }
 
@@ -98,3 +103,5 @@
     width: 100%;
   }
 }
+
+

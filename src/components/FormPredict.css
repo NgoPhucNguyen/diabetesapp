@@ -128,29 +128,45 @@ textarea:focus {
 /* ==============================
  📱 Better Small-Screen Adjustments
 ============================== */
-@media (max-width: 768px) {
-  .predict-form {
-    padding: 1rem;
-    margin: 1rem;
+@media (max-width: 700px) {
+  fieldset {
+    border: 2px solid #1e40af; /* keep strong visual border */
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
   }
 
-  fieldset {
-    grid-template-columns: 1fr; /* stack single column */
-    padding: 1rem;
+  legend {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
   }
 
   label {
-    white-space: normal;
     font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .predict-form {
+    width: 95%;
+    padding: 1rem;
+    margin: auto;
   }
 
   input,
   select {
+    width: 100%;
     font-size: 0.95rem;
+    padding: 0.6rem 0.7rem;
+    border-radius: 6px;
   }
 
   .submit-btn {
     font-size: 1rem;
+    width: 100%;
     padding: 0.9rem;
+    border-radius: 8px;
   }
 }

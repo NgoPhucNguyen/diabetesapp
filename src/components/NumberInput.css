@@ -49,8 +49,27 @@
   margin: 0;
 }
 
-/* Optional: Slightly dim the input in dark mode */
-:root[data-theme='dark'] .number-input {
-  background-color: var(--card-bg);
-  border-color: var(--border-color);
+.number-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
+
+@media (max-width: 480px) {
+  .number-input-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .number-input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+
