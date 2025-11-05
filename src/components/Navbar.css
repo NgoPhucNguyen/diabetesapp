@@ -79,7 +79,7 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--navbar-mobile-bg);
+    background-color: #fff;
     position: absolute;
     top: 100%;
     left: 0;

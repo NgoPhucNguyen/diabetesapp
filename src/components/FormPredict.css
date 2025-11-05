@@ -125,17 +125,32 @@ textarea:focus {
  📱 Responsive Design
 ============================== */
 
-@media (max-width: 700px) {
+/* ==============================
+ 📱 Better Small-Screen Adjustments
+============================== */
+@media (max-width: 768px) {
   .predict-form {
-    padding: 1.5rem;
-    margin: 20px 1rem;
+    padding: 1rem;
+    margin: 1rem;
   }
 
   fieldset {
-    padding: 1rem 1.2rem;
+    grid-template-columns: 1fr; /* stack single column */
+    padding: 1rem;
   }
 
   label {
     white-space: normal;
+    font-size: 0.95rem;
+  }
+
+  input,
+  select {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.9rem;
   }
 }
