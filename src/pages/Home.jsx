@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         <div className="home-image">
-          <img src="/public/images/doctor.jpg" alt="Doctor consulting a diabetes patient" />
+          <img src="/images/doctor.jpg" alt="Doctor consulting a diabetes patient" />
         </div>
       </div>
 
